@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Black.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Bold.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Italic.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Light.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Medium.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Regular.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-Thin.ttf" />
+    <AvaloniaResource Remove="Assets\Fonts\Roboto-ThinItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Fonts\Roboto-Black.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Bold.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Italic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Light.ttf" />
+    <None Remove="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Medium.ttf" />
+    <None Remove="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Thin.ttf" />
+    <None Remove="Assets\Fonts\Roboto-ThinItalic.ttf" />
+    <None Remove="Assets\Icons\history_icon.png" />
+    <None Remove="Assets\Icons\home_icon.png" />
+    <None Remove="Assets\Icons\info_icon.png" />
+    <None Remove="Assets\Icons\plus_icon.png" />
+    <None Remove="Assets\Icons\report_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Black.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Bold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Italic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Light.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-Thin.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Roboto-ThinItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.11" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.11" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\HomeView.axaml.cs">
+      <DependentUpon>HomeView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\TestTypeView.axaml.cs">
+      <DependentUpon>TestTypeView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

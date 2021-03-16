@@ -1,0 +1,136 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:WAPTT.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="WAPTT.Views.MainWindow"
+		Width="800"
+		Height="450"
+        Icon="/Assets/avalonia-logo.ico"
+		Title="WebAppPenTest"
+		Background="#2d2a36">
+
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="80" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="50" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid.Styles>
+				<Style Selector="Button">
+					<Setter Property="Background" Value="#4b4659" />
+					<Setter Property="BorderThickness" Value="0" />
+					<Setter Property="Foreground" Value="#2d2a36" />
+					<Setter Property="FontSize" Value="30" />
+					<Setter Property="FontFamily" Value="resm:WAPTT.Assets.Fonts.Roboto-Bold.ttf?assembly=WAPTT#Roboto" />
+				</Style>
+				<Style Selector="TextBlock.description">
+					<Setter Property="FontFamily" Value="resm:WAPTT.Assets.Fonts.Roboto-Regular.ttf?assembly=WAPTT#Roboto" />
+					<Setter Property="FontSize" Value="35" />
+					<Setter Property="Foreground" Value="#908c9c" />
+					<Setter Property="HorizontalAlignment" Value="Left" />
+				</Style>
+				<Style Selector="TextBlock.title">
+					<Setter Property="FontFamily" Value="resm:WAPTT.Assets.Fonts.Roboto-Regular.ttf?assembly=WAPTT#Roboto" />
+					<Setter Property="FontSize" Value="50" />
+					<Setter Property="Foreground" Value="#908c9c" />
+					<Setter Property="HorizontalAlignment" Value="Left" />
+					<Setter Property="VerticalAlignment" Value="Top" />
+				</Style>
+				<Style Selector="TextBlock.options">
+					<Setter Property="FontFamily" Value="resm:WAPTT.Assets.Fonts.Roboto-Regular.ttf?assembly=WAPTT#Roboto" />
+					<Setter Property="FontSize" Value="25" />
+					<Setter Property="Foreground" Value="#908c9c" />
+					<Setter Property="HorizontalAlignment" Value="Left" />
+					<Setter Property="VerticalAlignment" Value="Center" />
+				</Style>
+				<Style Selector="TextBlock.box">
+					<Setter Property="Background" Value="#6b6482" />
+					<Setter Property="FontSize" Value="15" />
+				</Style>
+				<Style Selector="CheckBox">
+					<Setter Property="Background" Value="#373342" />
+				</Style>
+				<Style Selector="TextBox">
+					<Setter Property="TextWrapping" Value="Wrap" />
+					<Setter Property="AcceptsReturn" Value="True" />
+					<Setter Property="Background" Value="#373342" />
+					<Setter Property="Foreground" Value="#908c9c" />
+					<Setter Property="BorderThickness" Value="0" />
+					<Setter Property="FontSize" Value="14" />
+					<Setter Property="HorizontalAlignment" Value="Left" />
+					<Setter Property="VerticalAlignment" Value="Center" />
+				</Style>
+			</Grid.Styles>
+				
+			<Grid Grid.Column="0" Grid.RowSpan="2">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="80" />
+					<RowDefinition Height="80" />
+					<RowDefinition Height="80" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="80" />
+				</Grid.RowDefinitions>
+
+				<Button Name="homeButton" Click="Click_Home"
+						Padding="10" Grid.Row="0" Grid.Column="0"
+						Command="{Binding UpdateViewCommand}" CommandParameter="TestType">
+					<Image Source="avares://WAPTT/Assets/Icons/home_icon.png" />
+				</Button>
+
+				<Button Name="historyButton" Click="Click_History"
+						Padding="10" Grid.Row="1" Grid.Column="0"
+						Command="{Binding UpdateViewCommand}" CommandParameter="History">
+					<Image Source="avares://WAPTT/Assets/Icons/history_icon.png" />
+				</Button>
+
+				<Button Name="reportButton" Click="Click_Report"
+						Padding="10" Grid.Row="2" Grid.Column="0"
+						Command="{Binding UpdateViewCommand}" CommandParameter="Report">
+					<Image Source="avares://WAPTT/Assets/Icons/report_icon.png" />
+				</Button>
+
+				<Button Grid.Row="3" Grid.Column="0">
+
+				</Button>
+
+				<Button Name="infoButton" Click="Click_Info"
+						Padding="10" Grid.Row="4" Grid.Column="0"
+						Command="{Binding UpdateViewCommand}" CommandParameter="Info">
+					<Image Source="avares://WAPTT/Assets/Icons/info_icon.png" />
+				</Button>
+			</Grid>
+
+			<Grid Grid.Row="0" Grid.Column="2">
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="110" />
+					<ColumnDefinition Width="150" />
+					<ColumnDefinition Width="150" />
+				</Grid.ColumnDefinitions>
+
+				<Button Name="step1Button" Click="Click_Step1"
+						Grid.Column="1" Height="40" Margin="0, 0, 10, 0"
+						Command="{Binding UpdateViewCommand}" CommandParameter="TestType">
+					STEP 1
+				</Button>
+
+				<Button Name="step2Button" Click="Click_Step2"
+						Grid.Column="2" Height="40" Margin="10, 0, 10, 0"
+						Command="{Binding UpdateViewCommand}" CommandParameter="Home">
+					STEP 2
+				</Button>
+
+			</Grid>
+				
+			<ContentControl Grid.Column="2" Grid.Row="1"
+							Padding="10"
+							Content="{Binding SelectedViewModel}"/>
+
+		</Grid>
+
+</Window>

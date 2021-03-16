@@ -1,0 +1,104 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WAPTT.Views.TestTypeView">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="60" />
+			<RowDefinition Height="60" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="80" />
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+
+		<TextBlock Classes="title"
+				   Grid.Row="0" Grid.Column="1">
+			New Test
+		</TextBlock>
+
+		<TextBlock Classes="description"
+				   Grid.Row="1" Grid.Column="1"
+				   VerticalAlignment="Center">
+			Set Test Parameters
+		</TextBlock>
+
+		<Grid Grid.Row="2" Grid.Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="30" />
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Classes="options" VerticalAlignment="Bottom"
+					   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+				URL
+			</TextBlock>
+
+			<TextBox  Text="{Binding URL}" Watermark="Full url, including sql query"
+					  MinWidth="400"
+					  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+			</TextBox>
+
+			<TextBlock Classes="options" VerticalAlignment="Bottom"
+					   Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+				Cookies
+			</TextBlock>
+
+			<TextBox  Name="Cookie_Name" Text="{Binding CookieName}"
+					  Watermark="Name"
+					  Width="130"
+					  Grid.Row="3" Grid.Column="0">
+			</TextBox>
+
+			<TextBox  Name="Cookie_Value" Text="{Binding CookieValue}"
+					  Watermark="Value"
+					  Width="130"
+					  Grid.Row="3" Grid.Column="1">
+			</TextBox>
+
+			<TextBox  Name="Cookie_Path" Text="{Binding CookiePath}"
+					  Watermark="Path"
+					  Width="130"
+					  Grid.Row="3" Grid.Column="2">
+			</TextBox>
+
+			<TextBox  Name="Cookie_Domain" Text="{Binding CookieDomain}"
+					  Watermark="Domain"
+					  Width="130"
+					  Grid.Row="3" Grid.Column="3">
+			</TextBox>
+
+			<Button Name="Add_Cookie_Button" Command="{Binding AddCookie}"
+					Height="30"
+					Grid.Row="3" Grid.Column="4">
+				<Image Source="/Assets/Icons/plus_icon.png" Stretch="Fill"/>
+			</Button>
+
+
+		</Grid>
+
+		<TextBox Name="Cookie_List_TextBox" Text="{Binding CookieList}"
+				 Watermark="Cookies list"
+				 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+				 Grid.Row="3" Grid.Column="1">
+		</TextBox>
+
+		
+	</Grid>
+</UserControl>

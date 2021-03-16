@@ -1,0 +1,30 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="WAPTT.Views.ReportView">
+	
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="80" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<TextBlock Classes="title"
+				   Grid.Row="0" Grid.Column="1">
+		Latest Report</TextBlock>
+
+		<TextBox   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+				   Background="#6b6482" Foreground="Black" FontSize="15"
+				   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+				   Text="{Binding LatestReport}">
+		</TextBox>
+
+	</Grid>
+	
+</UserControl>

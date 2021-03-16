@@ -1,0 +1,29 @@
+﻿<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WAPTT"
+			 xmlns:views="clr-namespace:WAPTT.Views"
+			 xmlns:viewmodels="clr-namespace:WAPTT.ViewModels"
+             x:Class="WAPTT.App">
+    <Application.DataTemplates>
+		<DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+			<views:HomeView/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:HistoryViewModel}">
+			<views:HistoryView/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:ReportViewModel}">
+			<views:ReportView/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:InfoViewModel}">
+			<views:InfoView/>
+		</DataTemplate>
+		<DataTemplate DataType="{x:Type viewmodels:TestTypeViewModel}">
+			<views:TestTypeView/>
+		</DataTemplate>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+        <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
+    </Application.Styles>
+</Application>

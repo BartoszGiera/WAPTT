@@ -1,0 +1,89 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="WAPTT.Views.HomeView"
+			 >
+	<Grid>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="60" />
+			<RowDefinition Height="60" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="80" />
+		</Grid.RowDefinitions>
+		
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+
+		<TextBlock Classes="title"
+				   Grid.Row="0" Grid.Column="1">
+		New Test</TextBlock>
+
+		<TextBlock Classes="description"
+				   Grid.Row="1" Grid.Column="1"
+				   VerticalAlignment="Center">
+			Choose SQL Injection Method</TextBlock>
+
+		<Grid Grid.Row="2" Grid.Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="50" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="50" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+
+			<TextBlock Classes="options"
+					   VerticalAlignment="Bottom"
+					   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+					   Text="In-Band"/>
+			
+			<TextBlock Classes="options" IsVisible="False"
+					   VerticalAlignment="Bottom"
+					   Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
+					   Text="Blind"/>
+			
+			<CheckBox Name="ErrorBasedCheckBox" Checked="Checked_Error_Based" Unchecked="Unchecked_Error_Based"
+					  Grid.Row="1" Grid.Column="0"/>
+			<TextBlock Classes="options"
+					   Grid.Row="1" Grid.Column="1"
+					   Text="Error-based"/>
+			
+			<CheckBox Name="UnionBasedCheckBox" Checked="Checked_Union_Based" Unchecked="Unchecked_Union_Based"
+					  Grid.Row="2" Grid.Column="0"/>
+			<TextBlock Classes="options"
+					   Grid.Row="2" Grid.Column="1"
+					   Text="Union-based"/>
+			
+			<CheckBox Name="BooleanBasedCheckBox" IsVisible="False"
+					  Grid.Row="1" Grid.Column="2"/>
+			<TextBlock Classes="options" IsVisible="False"
+					   Grid.Row="1" Grid.Column="3"
+					   Text="Boolean-based"/>
+			
+			<CheckBox Name="TimeBasedCheckBox" IsVisible="False"
+					  Grid.Row="2" Grid.Column="2"/>
+			<TextBlock Classes="options" IsVisible="False"
+					   Grid.Row="2" Grid.Column="3"
+					   Text="Time-based"/>
+
+		</Grid>
+
+		<Button Name="run_Button" Command="{Binding Run}" Click="Click_Run"
+				Width="120"
+				HorizontalAlignment="Right" VerticalAlignment="Bottom"
+				Grid.Row="3" Grid.Column="1">
+			RUN!
+		</Button>
+
+	</Grid>
+</UserControl>

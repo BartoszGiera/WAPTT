@@ -1,0 +1,82 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj": {}
+  },
+  "projects": {
+    "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj",
+        "projectName": "WAPTT",
+        "projectPath": "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj",
+        "packagesPath": "C:\\Users\\djbar\\.nuget\\packages\\",
+        "outputPath": "G:\\Visual Studio Projects\\WAPTT\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "G:\\Visual Studio Projects\\WAPTT\\NuGet.Config",
+          "C:\\Users\\djbar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/avalonia-ci/api/v2": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.9.11, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.9.11, )"
+            },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[0.9.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

