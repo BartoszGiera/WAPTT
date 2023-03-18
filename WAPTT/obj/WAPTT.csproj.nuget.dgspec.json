@@ -1,32 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj": {}
+    "D:\\Repos\\WAPTT\\WAPTT\\WAPTT.csproj": {}
   },
   "projects": {
-    "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj": {
+    "D:\\Repos\\WAPTT\\WAPTT\\WAPTT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj",
+        "projectUniqueName": "D:\\Repos\\WAPTT\\WAPTT\\WAPTT.csproj",
         "projectName": "WAPTT",
-        "projectPath": "G:\\Visual Studio Projects\\WAPTT\\WAPTT.csproj",
+        "projectPath": "D:\\Repos\\WAPTT\\WAPTT\\WAPTT.csproj",
         "packagesPath": "C:\\Users\\djbar\\.nuget\\packages\\",
-        "outputPath": "G:\\Visual Studio Projects\\WAPTT\\obj\\",
+        "outputPath": "D:\\Repos\\WAPTT\\WAPTT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "G:\\Visual Studio Projects\\WAPTT\\NuGet.Config",
+          "D:\\Repos\\WAPTT\\WAPTT\\NuGet.Config",
           "C:\\Users\\djbar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://www.myget.org/F/avalonia-ci/api/v2": {}
         },
@@ -65,16 +66,35 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.28, 3.1.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
